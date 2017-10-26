@@ -8,11 +8,9 @@ object P06 extends App {
 
   private def isPalindrome(list: List[Int]):Boolean = list == reverse(list)
 
-  private def reverse(targetList: List[Int], resultList: List[Int] = Nil): List[Int] = {
-    if (targetList.isEmpty){
-      resultList
-    } else {
-      reverse(targetList.tail, targetList.head :: resultList)
-    }
+  private def reverse(targetList: List[Int], resultList: List[Int] = Nil): List[Int] = targetList match {
+    case Nil          => resultList
+    case head :: tail => reverse(tail, head :: resultList)
+    case _            => throw new NoSuchElementException
   }
 }
