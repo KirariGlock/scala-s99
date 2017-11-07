@@ -5,7 +5,7 @@ object P12 extends App {
   println(result)
 
   private def decode(targetList: List[(Int, Symbol)], resultList: List[Symbol] = Nil):List[Symbol] = targetList match {
-    case Nil                     => resultList.reverse
-    case (index, symbol) :: tail =>  decode(tail, List.fill(index)(symbol) ::: resultList)
+    case Nil                     => resultList
+    case (index, symbol) :: tail =>  decode(tail, resultList ::: List.fill(index)(symbol))
   }
 }
