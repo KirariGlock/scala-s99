@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/kitazawa/IdeaProjects/scala-s99/src/main/scala/P11_20/P18.scala:7:91: not found: type Nil[0m
+[0m[[0m[31merror[0m] [0m[0m  private def slice(startIndex :Int, endIndex :Int, targetList: List[Symbol], resultList: Nil) :List[(Symbol)] = targetList match{[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
